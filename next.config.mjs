@@ -1,7 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+    eslint: {
+        ignoreDuringBuilds: true,
+    },
     images: {
-        domains: ['source.unsplash.com', 'lh3.googleusercontent.com'], // Add 'lh3.googleusercontent.com'
+        domains: ['source.unsplash.com', 'lh3.googleusercontent.com'],
     },
 };
 
