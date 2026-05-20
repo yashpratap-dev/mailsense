@@ -23,14 +23,16 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        style={{ background: '#050508' }}
+        suppressHydrationWarning
       >
         <UserProvider>
-        <ThemeProvider attribute="class" defaultTheme="dark">
-          {children}
-        </ThemeProvider>
+          <ThemeProvider attribute="class" defaultTheme="dark" disableTransitionOnChange>
+            {children}
+          </ThemeProvider>
         </UserProvider>
       </body>
     </html>
