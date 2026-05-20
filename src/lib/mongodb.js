@@ -48,40 +48,34 @@
 
 
 import { MongoClient } from 'mongodb';
-import dotenv from 'dotenv';
-
-// Load environment variables only if not in Next.js (Node.js environment)
-if (!process.env.NODE_ENV || process.env.NODE_ENV !== 'development') {
-  dotenv.config({ path: '.env.local' });
-}
 
 const uri = process.env.MONGODB_URI;
 
 let client;
 let clientPromise;
 
-if (!uri) {
-  throw new Error('Please add your Mongo URI to the .env.local file');
-}
-
-if (process.env.NODE_ENV === 'development') {
-  if (!global._mongoClientPromise) {
+// Only connect at runtime — never crash at build time
+if (uri) {
+  if (process.env.NODE_ENV === 'development') {
+    if (!global._mongoClientPromise) {
+      client = new MongoClient(uri);
+      global._mongoClientPromise = client.connect();
+    }
+    clientPromise = global._mongoClientPromise;
+  } else {
     client = new MongoClient(uri);
-    global._mongoClientPromise = client.connect();
+    clientPromise = client.connect();
   }
-  clientPromise = global._mongoClientPromise;
-} else {
-  client = new MongoClient(uri);
-  clientPromise = client.connect();
 }
 
-// Dynamic database connection
 export async function connectToDatabase(dbName = 'mySaaSApp') {
+  if (!uri) {
+    throw new Error('Please add your MONGODB_URI to environment variables');
+  }
   if (!client) {
     client = await clientPromise;
   }
-  const db = client.db(dbName); // Dynamically select the database
-  return db;
+  return client.db(dbName);
 }
 
 export default clientPromise;
