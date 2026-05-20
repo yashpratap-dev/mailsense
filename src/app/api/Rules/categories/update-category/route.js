@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // src/app/api/Rules/update-category.js
 
 import { connectToDatabase } from '@/lib/mongodb';

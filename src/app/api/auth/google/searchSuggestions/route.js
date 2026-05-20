@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // import { getAccessToken } from '@auth0/nextjs-auth0';
 // import { google } from 'googleapis';
 

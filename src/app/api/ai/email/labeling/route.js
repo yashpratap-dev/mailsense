@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // import { google } from 'googleapis';
 // import OpenAI from 'openai';
 // import { getSession } from '@auth0/nextjs-auth0';

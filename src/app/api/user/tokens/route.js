@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { connectToDatabase } from '@/lib/database';
 
 export async function GET(req) {

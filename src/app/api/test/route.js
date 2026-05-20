@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // src/app/api/test/route.js
 import { NextResponse } from 'next/server';
 import clientPromise from '../../../lib/mongodb';

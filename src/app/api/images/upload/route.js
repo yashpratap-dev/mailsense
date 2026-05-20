@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { Storage } from '@google-cloud/storage';
 import { NextResponse } from 'next/server';
 

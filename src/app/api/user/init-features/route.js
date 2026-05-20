@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // // src/app/api/user/init-features/route.js
 // import { connectToDatabase } from '@/lib/mongodb';
 // import { getSession } from '@auth0/nextjs-auth0';

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // import { connectToDatabase } from '@/lib/mongodb';
 // import { getSession } from '@auth0/nextjs-auth0';
 // import { v4 as uuidv4 } from 'uuid';

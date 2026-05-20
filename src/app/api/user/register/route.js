@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // src/app/api/users/register.js
 import { getSession } from '@auth0/nextjs-auth0';
 import { addUserToDatabase } from '../../../../lib/user';

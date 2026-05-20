@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // /src/app/api/Rules/update-field.js
 import { connectToDatabase } from '@/lib/mongodb';
 import { ObjectId } from 'mongodb';

@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // src/app/api/Schedule/send/route.js
 import { google } from 'googleapis';
 import { getSession } from '@auth0/nextjs-auth0';

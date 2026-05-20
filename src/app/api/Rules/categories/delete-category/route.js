@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // src/app/api/Rules/categories/delete-category.js
 
 import { connectToDatabase } from '@/lib/mongodb';

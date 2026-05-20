@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // import { google } from 'googleapis';
 // import { getSession } from '@auth0/nextjs-auth0';
 // import getUserTokens from '@/lib/getUserTokens';

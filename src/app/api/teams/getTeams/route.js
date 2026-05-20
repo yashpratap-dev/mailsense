@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 // import { connectToDatabase } from '@/lib/mongodb'; // Ensure this points to your MongoDB connection logic
 // import { NextResponse } from 'next/server';
 
