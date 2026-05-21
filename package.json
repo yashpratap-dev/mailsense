@@ -82,7 +82,7 @@
     "react-bootstrap": "^2.10.6",
     "react-calendar": "^5.1.0",
     "react-date-picker": "^11.0.0",
-    "react-datepicker": "^7.5.0",
+    "react-datepicker": "^9.1.0",
     "react-dom": "^18",
     "react-draggable": "^4.4.6",
     "react-google-calendar-api": "^2.3.0",
